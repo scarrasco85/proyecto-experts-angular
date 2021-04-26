@@ -1,0 +1,119 @@
+<div class="box">
+    <form [formGroup]="createExpertForm" (submit)="newExpert()">
+
+        <!-- Title -->
+        <!-- <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile class="title-new-expert" [colspan]="1"> -->
+        <span class="title-new-expert">Nuevo Experto</span>
+        <!-- </mat-grid-tile>
+        </mat-grid-list> -->
+
+        <!-- Name - Nif colums -->
+        <mat-grid-list cols="2" rowHeight="100px">
+
+            <mat-grid-tile [colspan]="1">
+                <mat-grid-tile-header class="title">NOMBRE COMPLETO*</mat-grid-tile-header>
+                <div class="div-input-2">
+                    <input class="input-2" matInput formControlName="name" placeholder="Nombre Completo *" />
+                </div>
+
+
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1">
+                <mat-grid-tile-header>NIF</mat-grid-tile-header>
+                <input matInput formControlName="nif" placeholder="Ej: 12345678A" />
+
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+        <!-- Etiquetas Column -->
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1">
+                <div>
+                    <mat-grid-tile-header>ETIQUETAS</mat-grid-tile-header>
+                </div>
+
+                <div class="div-input-one">
+
+                    <app-tags-list-selected [selectedValue]="tagSelected" (onSelectedValue)="addTagToList( $event )"></app-tags-list-selected>
+                    <div *ngFor="let item of tagListSelected">
+                        <div class="tags-selected">
+                            <span> {{item.name}}</span>
+                        </div>
+
+                    </div>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <!-- Disponibilidad Column -->
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1">
+                <div>
+                    <mat-grid-tile-header>DISPONIBILIDAD</mat-grid-tile-header>
+                </div>
+
+                <div class="div-input-one">
+
+                    <app-availability-select [selectedValue]="availabilitySelected" (onSelectedValue)="updateAvailability( $event )"></app-availability-select>
+
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <!-- Teléfono - Email colums -->
+        <mat-grid-list cols="2" rowHeight="100px">
+
+            <mat-grid-tile [colspan]="1">
+                <mat-grid-tile-header class="title">TELÉFONO</mat-grid-tile-header>
+                <div class="div-input-2">
+                    <input class="input-2" matInput formControlName="contactPhone" placeholder="Ej +34 622 00 00 00" />
+                </div>
+
+
+            </mat-grid-tile>
+            <mat-grid-tile [colspan]="1">
+                <mat-grid-tile-header>EMAIL</mat-grid-tile-header>
+                <input matInput formControlName="contactEmail" placeholder="Ej: juanperez@hmail.com" />
+
+            </mat-grid-tile>
+
+        </mat-grid-list>
+
+        <!-- Dirección Column -->
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1">
+                <div>
+                    <mat-grid-tile-header>DIRECCIÓN</mat-grid-tile-header>
+                </div>
+
+                <div class="div-input-one">
+                    <input class="input" matInput formControlName="contactCity" placeholder="Ej: Avenida de Colón, Valencia, Valencia" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <!-- Dirección Column -->
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1">
+                <div>
+                    <mat-grid-tile-header>LINKEDIN</mat-grid-tile-header>
+                </div>
+
+                <div class="div-input-one">
+                    <input class="input" matInput formControlName="contactLinkedin" placeholder="Introduce el enlace al perfil de LinkedIn del experto" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <!-- Botón Column -->
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1">
+                <button mat-raised-button color="primary" type="submit">Crear Nuevo Experto</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+    </form>
+
+</div>

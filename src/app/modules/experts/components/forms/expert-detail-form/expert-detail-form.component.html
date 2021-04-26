@@ -1,0 +1,186 @@
+<form [formGroup]="detailExpertForm" (submit)="updateExpert()">
+    <div class="edf-todo">
+
+        <div class="edf-casi-todo">
+            <div class="edf-top">
+
+                <div class="edf-div-foto-datos">
+                    <div class="edf-foto">
+                        <svg width="116" height="116" viewBox="0 0 116 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="116" height="116" rx="58" fill="#D9FFE1" />
+                <path
+                d="M55.631 47.8636H51.4986V60.2131H51.326L42.8501 47.8636H39.2067V67.5H43.3583V55.141H43.5021L52.0451 67.5H55.631V47.8636ZM62.4458 67.5L63.9031 63.0224H70.9887L72.4461 67.5H76.895L70.1258 47.8636H64.7757L57.9969 67.5H62.4458ZM64.9578 59.7816L67.374 52.3509H67.5274L69.9436 59.7816H64.9578Z"
+                fill="white" />
+                </svg>
+                    </div>
+
+                    <div class="edf-nombre-dni">
+
+                        <div class="edf-nombre">
+                            <input class="input-2" matInput formControlName="name" placeholder="Nombre Completo *" [selectedValue]="this.expert.name" (blur)="updateName( $event )" />
+                        </div>
+
+
+                        <div class="edf-dni">
+
+                            <span>DNI: </span>
+                            <input class="input-2" matInput formControlName="nif" placeholder="123456789" [selectedValue]="this.expert.nif" (blur)="updateNif( $event )" />
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="edf-datos-derecha">
+
+                </div>
+
+            </div>
+
+            <div class="edf-fichas">
+
+                <mat-tab-group dynamicHeight>
+
+                    <mat-tab class="datos" label="Datos generales">
+                        <div class="edf-ficha-datos">
+
+                            <div class="edf-datos-fila-top">
+
+                                <div class="text-titulos">DISPONIBILIDAD
+                                    <app-availability-select [selectedValue]="this.expert.availability" (onSelectedValue)="updateAvailability( $event )"></app-availability-select>
+                                </div>
+
+                                <div class="text-titulos">ESTADO
+                                    <app-status-select [selectedValue]="this.expert.status" (onSelectedValue)="updateStatus( $event )"></app-status-select>
+                                </div>
+
+                                <div class="text-titulos">VALORACIÓN
+                                    <app-score-select [selectedValue]="this.expert.score" (onSelectedValue)="updateScore( $event )"></app-score-select>
+                                </div>
+
+                                <div class="text-titulos">ORIGEN
+                                    <app-origin-selector [selectedValue]="this.expert.origin" (onSelectedValue)="updateOrigin( $event )"></app-origin-selector>
+                                </div>
+
+                            </div>
+
+                            <div class="edf-datos-cont-eti">
+
+                                <div class="edf-datos-contacto">
+                                    <div>
+                                        <div class="text-titulos">
+                                            CONTACTO
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <mat-icon>phone</mat-icon>
+                                            <span class="title">TELÉFONO</span>
+                                        </div>
+                                        <div>
+                                            <input class="input-2" matInput formControlName="contactPhone" placeholder="Ej +34 622 00 00 00 " [selectedValue]="this.expert.contactPhone" (blur)="updatePhone( $event )" />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <mat-icon>email</mat-icon>
+                                            <span class="title">EMAIL</span>
+                                        </div>
+                                        <div>
+                                            <input matInput formControlName="contactEmail" placeholder="examplemail@gmial.com" [selectedValue]="this.expert.contactEmail" (blur)="updateEmail( $event )" />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <mat-icon>home</mat-icon>
+                                            <span class="title">DIRECCIÓN</span>
+                                        </div>
+                                        <div>
+                                            <input matInput formControlName="contactCity" placeholder="AVD. LOS ÁNGELES S/N" [selectedValue]="this.expert.contactCity" (blur)="updateDirection( $event )" />
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <mat-icon>insert_drive_file</mat-icon>
+                                            <span class="title">CV</span>
+                                        </div>
+                                        <div class="buttons-cv">
+                                            <button mat-raised-button>Descargar</button>
+                                            <button mat-raised-button color="primary">Ver</button>
+                                            <button mat-raised-button color="primary">Volver a subir</button>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <div>
+                                            <mat-icon>link</mat-icon>
+                                            <span class="title">LinkedIn</span>
+                                        </div>
+                                        <div>
+                                            <input matInput formControlName="contactLinkedin" placeholder="https://www.linkekin.com/mi-cuenta-linkedin" [selectedValue]="this.expert.contactLinkedin" (blur)="updateLinkedin( $event )" />
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="edf-datos-etiquetas">
+
+                                    <div>
+                                        <div class="text-titulos">
+                                            <mat-grid-tile-header>ETIQUETAS</mat-grid-tile-header>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <app-tags-list-selected [selectedValue]="tagSelected" (onSelectedValue)="addTagToList( $event )"></app-tags-list-selected>
+                                        <div class="div-tags">
+                                            <div *ngFor="let item of tagListSelected">
+
+                                                <div class="tags-selected">
+                                                    {{item.name}}
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </mat-tab>
+
+                    <mat-tab label="Observaciones">
+                        <div class="edf-ficha-obser">
+                            <div class="edf-obser-fila-obser">
+                                <mat-grid-tile-header class="text-titulos">OBSERVACIONES</mat-grid-tile-header>
+                                <input class="input" matInput formControlName="observations" placeholder="Escribe algo..." [selectedValue]="this.expert.observations" (blur)="updateObservations( $event )" />
+                            </div>
+
+                            <div class="edf-obser-fila-motivo">
+                                <div>
+                                    <mat-grid-tile-header class="title text-titulos">MOTIVO DE DESCARTE</mat-grid-tile-header>
+                                    <app-motive-select></app-motive-select>
+                                </div>
+
+                                <div>
+                                    <mat-grid-tile-header class="text-titulos">ESPECIFICA EL MOTIVO</mat-grid-tile-header>
+                                    <input matInput formControlName="statusMotive" placeholder="Escribe algo..." />
+                                </div>
+                            </div>
+
+                        </div>
+                    </mat-tab>
+
+                </mat-tab-group>
+
+            </div>
+        </div>
+
+    </div>
+</form>

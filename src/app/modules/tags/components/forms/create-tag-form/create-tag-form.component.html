@@ -1,0 +1,56 @@
+<!-- Form to create a new Tag -->
+<div class="box">
+    <form [formGroup]="createTagForm" (submit)="newTag()">
+
+        <span class="title-new-hashtag">Nueva Etiqueta</span>
+
+
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1">
+                <div>
+                    <mat-grid-tile-header>NOMBRE DE LA ETIQUETA</mat-grid-tile-header>
+                </div>
+
+                <div class="div-input-one">
+                    <input class="input" matInput formControlName="name" placeholder="Escribe el nombre de la etiqueta" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1">
+                <div>
+                    <mat-grid-tile-header>CREADOR</mat-grid-tile-header>
+                </div>
+
+                <div class="div-input-one">
+                    <input class="input" matInput formControlName="creator" placeholder="Introduce el nombre del creador" />
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+        <mat-grid-list cols="1" rowHeight="100px">
+            <mat-grid-tile [colspan]="1">
+                <button mat-raised-button color="primary" type="submit">Crear Nueva Etiqueta</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+
+
+
+
+        <!-- <div class="input-div">
+
+            <input class="input" matInput formControlName="name" placeholder="" />
+
+        </div>
+        <div class="input-div">
+
+            <input class="input" matInput formControlName="creator" placeholder="" />
+
+        </div>
+
+        <div>
+            <button mat-raised-button color="primary" type="submit">Nueva Etiqueta</button>
+        </div> -->
+    </form>
+</div>

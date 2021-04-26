@@ -1,0 +1,13 @@
+<!-- Selected status expert to filter-->
+<form>
+    <mat-form-field appearance="fill">
+        <mat-select matNativeControl (selectionChange)="emitStatusSelected($event)">
+            <mat-option *ngFor="let option of status" [value]="option.value">
+                <div [style.background]="getColorTag(option.value)">
+                    {{option.viewValue}}
+                </div>
+
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>

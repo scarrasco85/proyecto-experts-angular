@@ -1,0 +1,26 @@
+<div class="divs-header">
+    <div class="div-title" *ngIf="this.divToLoad == 'experts-list'">
+        <div>
+            <span class="title">{{this.title}}</span>
+        </div>
+        <div>
+            <span class="info">{{this.numTotalRegisters}} CANDIDATOS</span>
+        </div>
+    </div>
+    <div class="div-title" *ngIf="this.divToLoad == 'tags-list'">
+        <div>
+            <span class="title">{{this.title}}</span>
+        </div>
+        <div>
+            <span class="info">{{this.numTotalRegisters}} ETIQUETAS</span>
+        </div>
+    </div>
+
+    <div *ngIf="this.divToLoad == 'expert-detail'">
+        <span routerLink="/experts" class="info-link"><mat-icon>keyboard_return</mat-icon>Volver a Lista de Expertos > <span class="strong">Información de experto</span></span>
+    </div>
+    <div>
+        <button routerLink="/experts/nuevo" *ngIf="this.newButtonToLoad == 'new_expert_button'" mat-flat-button color="primary"><mat-icon>add</mat-icon>Nuevo Experto</button>
+        <button routerLink="/tags/nueva" *ngIf="this.newButtonToLoad == 'new_tag_button'" mat-flat-button color="primary"><mat-icon>add</mat-icon>Nueva Etiqueta</button>
+    </div>
+</div>

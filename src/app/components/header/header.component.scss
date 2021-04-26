@@ -1,0 +1,99 @@
+.divs-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 77vw;
+    button {
+        background: #0ED28C;
+        border-radius: 5px;
+    }
+}
+
+.div-title {
+    /* Lista de Expertos */
+    position: static;
+    width: 221px;
+    height: 31px;
+    left: 0px;
+    top: 0px;
+}
+
+.title {
+    /* Header_title */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 31px;
+    /* Black */
+    color: #131340;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+
+.info {
+    /* Titles_text */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    /* Gray 5 */
+    color: #797D8A;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+
+.info-link {
+    position: static;
+    width: 521px;
+    height: 27px;
+    left: 46px;
+    top: 0px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 27px;
+    /* Black */
+    color: #131340;
+}
+
+.info-link:hover {
+    all: unset;
+    position: static;
+    width: 521px;
+    height: 27px;
+    left: 46px;
+    top: 0px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 21px;
+    line-height: 27px;
+    /* Black */
+    color: #131340;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+ ::ng-deep .mat-toolbar.mat-primary.mat-toolbar-single-row {
+    color: green;
+    box-shadow: 2px 4px 15px rgb(152 152 152 / 15%);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}

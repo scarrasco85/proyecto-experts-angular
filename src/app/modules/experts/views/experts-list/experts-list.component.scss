@@ -1,0 +1,128 @@
+.table-div {
+    width: 94%;
+    margin-top: 3%;
+    margin-left: 3%;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-form-field {
+    font-size: 14px;
+    width: 15%;
+}
+
+td,
+th {
+    width: 25%;
+     :hover {
+        border: 2px solid #0ED28C;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+}
+
+input {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 15px 20px;
+    position: static;
+    width: 90%;
+    height: 49px;
+    left: 10px;
+    top: 10px;
+    background: #F9FAFB;
+    /* Gray 2 */
+    border: 1px solid #E2E3E9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+
+ ::ng-deep .mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 15px 20px;
+    position: static;
+    width: 95%;
+    height: 49px;
+    left: 10px;
+    top: 10px;
+    background: #F9FAFB;
+    border: 1px solid #E2E3E9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 10px 0px;
+}
+
+tr.mat-row,
+tr.mat-footer-row {
+    height: 48px;
+    &:hover {
+        background-color: #F0F1F5;
+        cursor: pointer;
+    }
+}
+
+// ::ng-deep .mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+//   :hover{
+//     border: 2px solid #0ED28C;
+//     box-sizing: border-box;
+//     cursor: pointer;
+//   }
+// }
+::ng-deep .mat-form-field-type-mat-select:not(.mat-form-field-disabled) .mat-form-field-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 15px 20px;
+    position: static;
+    width: 95%;
+    height: 49px;
+    left: 10px;
+    top: 10px;
+    background: #F9FAFB;
+    border: 1px solid #E2E3E9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+    margin: 10px 0px;
+    &:hover {
+        border: 2px solid #0ED28C;
+        box-sizing: border-box;
+        cursor: pointer;
+    }
+}
+
+.score {
+    border-radius: 5px;
+    text-align: center;
+    // line-height: 5px;
+    width: 57px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.score:hover {
+    border: none;
+    width: 57px;
+}

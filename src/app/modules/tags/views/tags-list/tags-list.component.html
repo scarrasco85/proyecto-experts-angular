@@ -1,0 +1,68 @@
+<div class="mat-elevation-z8 table-div">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> ETIQUETA </th>
+            <td mat-cell *matCellDef="let row"> {{row.name}} </td>
+        </ng-container>
+
+        <!-- Creator Column -->
+        <ng-container matColumnDef="creator">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> CREADOR </th>
+            <td mat-cell *matCellDef="let row"> {{row.creator}} </td>
+        </ng-container>
+
+        <!-- CreatedAt Column -->
+        <ng-container matColumnDef="createdAt">
+            <th mat-header-cell *matHeaderCellDef mat-sort-header> FECHA CREACIÓN </th>
+            <div class="button-delete">
+                <td mat-cell *matCellDef="let row"> {{row.createdAt}} <span>
+                    <button *ngIf="row.id" (click)="deleteTag(row)" mat-flat-button color="primary"><mat-icon>delete</mat-icon> Borrar Etiqueta</button>
+                </span></td>
+            </div>
+
+        </ng-container>
+
+
+        <!-- Filtro Columna -->
+        <ng-container matColumnDef="nameFilter">
+            <th mat-header-cell *matHeaderCellDef>
+                <input matInput (keyup)="applyFilterName($event)" placeholder="Buscar..." #input>
+            </th>
+        </ng-container>
+
+        <!-- Filtro Creator -->
+        <ng-container matColumnDef="creatorFilter">
+            <th mat-header-cell *matHeaderCellDef>
+                <input matInput placeholder="" #input>
+            </th>
+        </ng-container>
+
+        <!-- Filtro CreatedAt -->
+        <ng-container matColumnDef="createdAtFilter">
+            <th mat-header-cell *matHeaderCellDef>
+                <input matInput placeholder="" #input>
+            </th>
+        </ng-container>
+
+
+        <!-- Header principal -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr clas mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+        <!-- Header Filtros -->
+        <tr mat-header-row *matHeaderRowDef="displayedFilters"></tr>
+
+
+
+        <!-- Row shown when there is no matching data. -->
+        <tr class="mat-row" *matNoDataRow>
+
+            <td [filterValue]="filterValue" class="mat-cell" colspan="4">Ninguna coincidencia "{{filterValue}}"</td>
+        </tr>
+
+    </table>
+    <mat-paginator [length]="totalTags" [pageSize]="filterParams.limit" [pageSizeOptions]="arrayOptions" showFirstLastButtons (page)="onPaginateChange($event)"></mat-paginator>
+
+</div>

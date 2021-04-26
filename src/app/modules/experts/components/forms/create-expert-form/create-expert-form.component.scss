@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "Inter";
+    src: url("../../../../../../fonts/Inter-VariableFont_slnt\,wght.ttf");
+}
+
+ ::ng-deep .mat-input-element {
+    all: unset;
+    display: block;
+}
+
+ ::ng-deep .mat-raised-button {
+    background-color: aqua;
+    width: 20%;
+}
+
+.box {
+    display: block;
+    margin: 0px auto;
+    margin-top: 37px;
+    width: 95%;
+    height: 790px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 16px rgba(117, 114, 150, 0.15);
+    border-radius: 20px;
+    padding: 1%;
+    margin-bottom: 50px;
+}
+
+.box::-webkit-scrollbar:vertical {
+    position: absolute;
+    width: 8px;
+    height: 690px;
+    left: 1902px;
+    top: 134px;
+    background-color: red;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 24px;
+}
+
+.box::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+.box::-webkit-scrollbar:vertical {
+    background-color: red;
+}
+
+.box::-webkit-scrollbar-button:increment,
+.box::-webkit-scrollbar-button {
+    display: none;
+}
+
+.box::-webkit-scrollbar:horizontal {
+    height: 10px;
+    background: red;
+}
+
+.box::-webkit-scrollbar-thumb {
+    background-color: red;
+    border-radius: 20px;
+    background-color: red;
+    border: 2px solid #f1f2f3;
+}
+
+.box::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: red;
+}
+
+.mat-grid-tile .mat-grid-tile-header,
+.mat-grid-tile .mat-grid-tile-footer {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background: #FFFFFF;
+    overflow: hidden;
+    padding: 0 16px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    // position
+    width: 155px;
+    height: 17px;
+    left: 0px;
+    top: 0px;
+    /* Titles_text */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-transform: uppercase;
+    font-feature-settings: 'pnum'on, 'lnum'on;
+    /* Gray 4 */
+    color: #A3A3B4;
+}
+
+input {
+    position: static;
+    width: 682.5px;
+    padding-left: 10px;
+    height: 40px;
+    left: 0px;
+    top: 0px;
+    /* Gray 2 */
+    border: 1px solid #E2E3E9;
+    box-sizing: border-box;
+    border-radius: 2px;
+    /* Table_text_p_regular */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    display: flex;
+    align-items: star;
+    font-feature-settings: 'pnum'on, 'lnum'on;
+    /* Gray 3 */
+    color: #C7C8CD;
+    margin: 0px 10px;
+}
+
+.div-input-2 {
+    display: block;
+    float: left;
+    width: 90%;
+    margin-left: 0px;
+    position: absolute;
+    left: 0px;
+}
+
+.input-2 {
+    width: 100%;
+}
+
+.div-input-one {
+    display: block;
+    float: left;
+    width: 100%;
+    margin-left: 0px;
+    position: absolute;
+    left: 0px;
+}
+
+.div-input-one input {
+    display: block;
+    float: left;
+    width: 98.5%;
+}
+
+.mat-focus-indicator .mat-raised-button {
+    background-color: aqua;
+}
+
+.title-new-expert {
+    position: static;
+    width: 150px;
+    height: 25px;
+    left: 60px;
+    top: 60px;
+    display: flex;
+    /* Course_Title_text */
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    /* Black */
+    color: #131340;
+    /* Inside Auto Layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 40px 15px;
+}
+
+ ::ng-deep .mat-form-field- e {
+    display: none;
+}
+
+ ::ng-deep .mat-form-field {
+    width: 98%;
+    height: 30px;
+    margin-left: 10px;
+}
+
+.mat-grid-tile {
+    input {
+        background: #F9FAFB;
+    }
+    button {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        margin: 5px;
+        position: static;
+        width: 1405px;
+        height: 49px;
+        left: 60px;
+        top: 887px;
+        // /* Green_light */
+        background: #0ED28C;
+        // border-radius: 5px;
+        // /* Inside Auto Layout */
+        // flex: none;
+        // order: 7;
+        // align-self: stretch;
+        // flex-grow: 0;
+        // margin: 40px 0px;
+    }
+}
+
+.tags-selected {
+    // display: flex;
+    margin-top: 13px;
+    background: #A3A3B4;
+    border-radius: 10px;
+    padding: 10px;
+    display: block;
+    width: 100px;
+    float: left;
+    margin-left: 10px;
+    text-align: center;
+}

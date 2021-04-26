@@ -1,0 +1,10 @@
+<!-- Origin Selector -->
+<form>
+    <mat-form-field>
+        <mat-select matNativeControl (selectionChange)="emitStatusSelected($event)">
+            <mat-option *ngFor="let option of status" [value]="option.value">
+                {{option.viewValue}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+</form>

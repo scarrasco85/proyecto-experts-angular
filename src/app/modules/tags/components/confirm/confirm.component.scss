@@ -1,0 +1,66 @@
+::ng-deep .mat-dialog-container {
+  padding: 0;
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 60px 40px 60px;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 16px rgba(117, 114, 150, 0.15);
+  border-radius: 10px;
+
+}
+
+h1 {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 21px;
+  line-height: 25px;
+  color: #131340;
+}
+
+p {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  font-feature-settings: 'pnum'on, 'lnum'on;
+  color: #131340;
+}
+
+.buttons-modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px 0px 20px 0px;
+  box-shadow: none;
+}
+
+.btn-1,
+.btn-2 {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 45%;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  font-feature-settings: 'pnum'on, 'lnum'on;
+  color: #FFFFFF;
+  background: #A3A3B4;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-2 {
+  background: #D66464;
+}
